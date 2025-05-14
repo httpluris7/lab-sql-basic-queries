@@ -21,21 +21,27 @@ FROM staff;
 SELECT DISTINCT release_year
 FROM film;
 
-SELECT COUNT(*) AS store_count
+SELECT 
+COUNT(*) AS store_count 
 FROM store;
 
-SELECT COUNT(*) AS employee_count
+
+SELECT 
+COUNT(*) AS employee_count
 FROM staff;
 
 
-SELECT COUNT(*) AS available_films
+SELECT 
+COUNT(*) AS available_films
 FROM inventory;
 
 
-SELECT COUNT(DISTINCT inventory_id) AS rented_films
+SELECT 
+COUNT(DISTINCT inventory_id) AS rented_films
 FROM rental;
 
-SELECT COUNT(DISTINCT last_name) AS unique_last_names
+SELECT 
+COUNT(DISTINCT last_name) AS unique_last_names
 FROM actor;
 
 SELECT title, length
@@ -46,11 +52,13 @@ LIMIT 10;
 SELECT * FROM actor
 WHERE first_name = 'SCARLETT';
 
-SELECT title, length
+SELECT 
+title, length
 FROM film
 WHERE title LIKE '%ARMAGEDDON%' AND length > 100;
 
-SELECT COUNT(*) AS films_with_bts
+SELECT 
+COUNT(*) AS films_with_bts
 FROM film
 WHERE special_features LIKE '%Behind the Scenes%';
 
